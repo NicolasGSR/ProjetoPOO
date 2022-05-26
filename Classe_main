@@ -1,0 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package View;
+
+import Modelo.Agendamento;
+import Modelo.Cliente;
+import Modelo.Servico;
+import Modelo.Usuario;
+import Modelo.Pessoa;
+
+/**
+ *
+ * @author joaom
+ */
+public class Main {
+    
+    
+     public static void main(String[] args){
+     
+         String nome = "JoãoM";
+         System.out.println(nome);
+         
+         Servico servico = new Servico(1, "barba", 30);
+         
+         System.out.println(servico.getDescricao());
+         System.out.println(servico.getValor());
+         
+         
+         Cliente cliente = new Cliente(1, "JoãoM", "rua teste", "78581885420");
+         System.out.println(cliente.getNome());
+         
+         Usuario usuario = new Usuario(1, "admin", "1234");
+         System.out.println(usuario.getNome());
+         
+         
+         Agendamento agendamento = new Agendamento( 1, cliente, servico, 30, "26/07/2022 09:15");
+         System.out.println(agendamento.getCliente().getNome());
+     }
+    
+    
+    
+}
